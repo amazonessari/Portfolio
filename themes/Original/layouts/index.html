@@ -4,6 +4,23 @@
     {{- partial "head.html" . -}}
   </head>
   <body>
-      <h1>Hello World</h1>
+    <div class="layout">
+      <div class="column_left">
+        <i class="fas fa-caret-left"></i>
+      </div>
+      {{- partial "header.html" . -}}
+      <div class="column_center">
+        <h2>Web Design & Development</h2>
+        <h3>11.2019</h3>
+        <img src="" alt="">
+        <h1>Portfolio Site</h1>
+        <div class="bar">
+        </div>
+      </div>
+      {{- partial "footer.html" . -}}
+      <div class="column_right">
+        <i class="fas fa-caret-right"></i>
+      </div>
+    </div>
   </body>
 </html>
