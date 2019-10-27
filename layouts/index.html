@@ -12,7 +12,7 @@
       <div class="column_center">
         <h2>Web Design & Development</h2>
         <h3>11.2019</h3>
-        <img src="../static/work3.png"/>
+        <img src="/work3.png"/>
         <h1>Portfolio Site</h1>
         <div class="bar">
         </div>
@@ -22,5 +22,7 @@
         <i class="fas fa-caret-right"></i>
       </div>
     </div>
+    {{ $script := resources.Get "js/index.js" | minify | fingerprint }}
+    <script href="{{ $script.Permalink }}"></script>
   </body>
 </html>
