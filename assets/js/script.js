@@ -1,3 +1,12 @@
+console.log("hello world!")
+
+var imgList = [
+	"work0.png",
+  "work1.png",
+  "work2.png",
+  "work3.png"
+];
+
 for(var i = 0; i < imgList.length; i++) {
 	// li要素を取得
 	var slide = document.createElement("li");

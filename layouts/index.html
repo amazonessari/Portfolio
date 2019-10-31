@@ -1,9 +1,4 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    {{- partial "head.html" . -}}
-  </head>
-  <body>
+{{ define "main" }}
     <div class="layout">
       <div class="column_left">
         <i class="fas fa-caret-left"></i>
@@ -22,7 +17,6 @@
         <i class="fas fa-caret-right"></i>
       </div>
     </div>
-    {{ $script := resources.Get "js/index.js" | minify | fingerprint }}
-    <script href="{{ $script.Permalink }}"></script>
-  </body>
-</html>
+    {{ $script := resources.Get "js/script.js" | minify | fingerprint -}}
+    <script src="{{ $script.Permalink }}" {{ printf "integrity=%q" $script.Data.Integrity | safeHTMLAttr }}></script>
+{{ end }}
