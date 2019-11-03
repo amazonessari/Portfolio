@@ -1,73 +1,142 @@
-//Home
-
+//Variable
 :root {
-    --font-en: 'Raleway', sans-serif, 'Roboto', sans-serif;
+    --font-en-title: 'Raleway', sans-serif;
+    --font-en-text: 'Roboto', sans-serif;
     --font-jp: 'Noto Sans JP', sans-serif;
     --color-white: #FFFFFF;
-    --color-portfolio: #262626;
+    --color-about: #262626;
 }
 
-body{
-  background-color: var(--color-portfolio);
+
+
+//Home page
+.layout{
   height: 100vh;
   width: 100%;
   color: var(--color-white);
+  display: grid;
+  grid-template-columns: 80px calc(100% - 160px) 80px;
+  grid-template-rows: 80px calc(100vh - 160px) 80px;
+  grid-template-areas:
+  "column_left header column_right"
+  "column_left column_center column_right"
+  "column_left footer column_right";
+  justify-content: stretch;
+  align-content: stretch;
 
-  .layout{
-    display: grid;
-    grid-template-columns: 80px calc(100% - 160px) 80px;
-    grid-template-rows: 80px calc(100vh - 160px) 80px;
-    grid-template-areas:
-    "column_left header column_right"
-    "column_left column_center column_right"
-    "column_left footer column_right";
-    justify-content: stretch;
-    align-content: stretch;
+  header{
+    height: 80px;
+    width: 100%;
+    grid-area: header;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 32px;
+  }
+  footer{
+    height: 80px;
+    width: 100%;
+    grid-area: footer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    p{
+      font-size: 12px;
+    }
+    i{
+      font-size: 24px;
+      margin-left: 24px;
+    }
+  }
+  .column_left{
+    grid-area: column_left;
+    width: 80px;
+    place-self: center;
+    text-align: center;
+    font-size: 24px;
+  }
+  .column_right{
+    grid-area: column_right;
+    width: 80px;
+    place-self: center;
+    text-align: center;
+    font-size: 24px;
+  }
+  .column_center{
+    grid-area: column_center;
+    position: relative;
+    background: linear-gradient(315deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 50%);
+    overflow: hidden;
+    .works{
+      .work{
+        display: none;
+        &.show{
+          display: block;
+        }
+        h2{
+          font-size: 5vw;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+        h3{
+          font-size: 10vw;
+          position: absolute;
+          top: 0;
+          left: 0;
+          color: rgba(255, 255, 255, 0.1);
+        }
+        h1{
+          font-size: 10vw;
+          position: absolute;
+          bottom: -0.5vw;
+          right: 0;
+        }
+        img{
+          width: 500px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          z-index: 1;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+    .bar{
+      background: rgba(255, 255, 255, 0.1);
+      position: absolute;
+      width: 100%;
+      height: 8px;
+      left: 0;
+      bottom: 0;
+    }
+  }
+}
+
+
+
+//Single page
+.fv-single{
+  .layout-single{
+    height: 500px;
+    width:100%;
+    padding: 0 80px;
+    color: var(--color-white);
 
     header{
       height: 80px;
       width: 100%;
-      grid-area: header;
       display: flex;
       justify-content: flex-end;
       align-items: center;
       font-size: 32px;
-    }
-    footer{
-      height: 80px;
-      width: 100%;
-      grid-area: footer;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      p{
-        font-size: 12px;
-      }
       i{
-        font-size: 24px;
         margin-left: 24px;
       }
     }
-    .column_left{
-      grid-area: column_left;
-      width: 80px;
-      place-self: center;
-      text-align: center;
-      font-size: 24px;
-    }
-    .column_right{
-      grid-area: column_right;
-      width: 80px;
-      place-self: center;
-      text-align: center;
-      font-size: 24px;
-    }
     .column_center{
-      grid-area: column_center;
-      font-family: var(--font-en);
       position: relative;
-      background: linear-gradient(315deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 50%);
-      overflow: hidden;
+
       h2{
         font-size: 5vw;
         position: absolute;
@@ -81,27 +150,99 @@ body{
         left: 0;
         color: rgba(255, 255, 255, 0.1);
       }
-      h1{
-        font-size: 10vw;
-        position: absolute;
-        bottom: 0;
-        right: 0;
+    }
+  }
+  img{
+    width: 50%;
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    z-index: 1;
+    transform: translateX(-50%);
+  }
+}
+
+
+.report{
+  padding: 80px;
+  h1{
+    text-align:center;
+    margin: auto 0;
+    font-size: 10vw;
+    padding: 80px 0;
+  }
+  article{
+    font-size: 16px;
+    line-height: 200%;
+    font-family: var(--font-en-text);
+    color: var(--color-about);
+  }
+}
+
+
+
+//Modal
+.modal{
+  background-color: var(--color-about);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height : 100vh;
+  overflow: hidden;
+  display: none;
+
+  .column_center{
+    h2{
+      font-size: 5vw;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    h3{
+      font-size: 10vw;
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: rgba(255, 255, 255, 0.1);
+    }
+    img{
+      height: 80%;
+      position: absolute;
+      bottom: 0;
+      left: 100px;
+    }
+    .description{
+      width: 50%;
+      padding: 16px;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      line-height: 200%;
+      h4{
+        font-size: 3vw;
+        margin-bottom: 16px;
       }
-      img{
-        width: 500px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        z-index: 1;
-        transform: translate(-50%, -50%);
+      p{
+        font-size: 16px;
+        margin-bottom: 16px;
+        font-family: var(--font-en-text);
       }
-      .bar{
-        background: rgba(255, 255, 255, 0.1);
-        position: absolute;
-        width: 100%;
-        height: 8px;
-        left: 0;
-        bottom: 0;
+      .skill-set{
+        font-size: 16px;
+        color: rgba(255, 255, 255, 0.5);
+        i{
+          margin-right: 8px;
+        }
+        span{
+          margin: 8px;
+          padding: 4px 16px;
+          border: 1px solid;
+          border-radius: 5px;
+          display: inline-block;
+          font-family: var(--font-en-text);
+        }
       }
     }
   }

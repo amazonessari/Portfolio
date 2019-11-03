@@ -3,6 +3,9 @@
 {{ $style := resources.Get "css/style.scss" | toCSS | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $style.Permalink }}">
 
+{{ $script := resources.Get "js/script.js" | minify | fingerprint -}}
+<script src="{{ $script.Permalink }}" defer {{ printf "integrity=%q" $script.Data.Integrity | safeHTMLAttr }}></script>
+
 <meta charset="utf-8">
 <script src="https://kit.fontawesome.com/18cf27077f.js"></script>
 
