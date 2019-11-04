@@ -32,6 +32,9 @@
     justify-content: flex-end;
     align-items: center;
     font-size: 32px;
+    i{
+      cursor: pointer;
+    }
   }
   footer{
     height: 80px;
@@ -54,6 +57,7 @@
     place-self: center;
     text-align: center;
     font-size: 24px;
+    cursor: pointer;
   }
   .column_right{
     grid-area: column_right;
@@ -61,6 +65,7 @@
     place-self: center;
     text-align: center;
     font-size: 24px;
+    cursor: pointer;
   }
   .column_center{
     grid-area: column_center;
@@ -69,9 +74,12 @@
     overflow: hidden;
     .works{
       .work{
-        display: none;
+        //display: none;
+        transition: all 1s ease;
+        opacity: 0;
         &.show{
-          display: block;
+          //display: block;
+          opacity: 1;
         }
         h2{
           font-size: 5vw;
@@ -98,18 +106,28 @@
           top: 50%;
           left: 50%;
           z-index: 1;
-          transform: translate(-50%, -50%);
+          animation: up-down 1s alternate infinite;
+          &:hover {
+            transform: scale(1.5);
+          }
         }
       }
     }
     .bar{
       background: rgba(255, 255, 255, 0.1);
       position: absolute;
-      width: 100%;
       height: 8px;
       left: 0;
       bottom: 0;
     }
+  }
+}
+@keyframes up-down{
+  0%{
+    transform: translate(-50%, -48%);
+  }
+  100%{
+    transform: translate(-50%, -52%);
   }
 }
 
@@ -162,20 +180,41 @@
   }
 }
 
-
 .report{
   padding: 80px;
-  h1{
+  .title{
     text-align:center;
     margin: auto 0;
     font-size: 10vw;
-    padding: 80px 0;
+    padding: 120px 0;
   }
   article{
-    font-size: 16px;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
     line-height: 200%;
-    font-family: var(--font-en-text);
     color: var(--color-about);
+    h1{
+      font-size: 80px;
+      padding: 80px 0 40px;
+      border-bottom: 1px solid;
+      margin: 80px 0 56px;
+    }
+    h2{
+      font-size: 40px;
+      margin-bottom: 32px;
+    }
+    h3{
+      font-size: 24px;
+    }
+    h4{
+      font-size: 16px;
+      font-weight: bold;
+    }
+    p{
+      font-size: 16px;
+      margin-bottom: 80px;
+    }
   }
 }
 
