@@ -1,10 +1,11 @@
 {{ define "main" }}
 {{ $postCount := len .Site.RegularPages }}
 <div class="layout">
-  <div class="column_left"><i class="fas fa-angle-left action"></i></div>
-  <div class="column_right"><i class="fas fa-angle-right action"></i></div>
+  <div class="column_left"><img class="action" src="arrow_left.svg"></div>
+  <div class="column_right"><img class="action" src="arrow_right.svg"></div>
   <header><img class="logo" src="logo.svg"><img class="icon-about action" src="icon_about.svg"></header>
-  {{- partial "footer.html" . -}}
+  <footer><p>Designed and Developed by ARISA</p><div class="snsIcons"><img class="icon-sns action" src="icon_mail.svg"><img class="icon-sns action" src="icon_skype.svg"><img class="icon-sns action" src="icon_facebook.svg"><img class="icon-sns action" src="icon_linkedin.svg"></div></footer>
+
   <div class="column_center">
     <ul class="works" id="{{ $postCount }}">
       {{range .Pages }}
