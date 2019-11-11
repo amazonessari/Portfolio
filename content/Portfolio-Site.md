@@ -6,6 +6,7 @@ language: "English"
 charge: "Web Design & Development"
 color: "#262626"
 image: "work3.png"
+name: "name3.svg"
 ---
 
 **Insert Lead paragraph here.**

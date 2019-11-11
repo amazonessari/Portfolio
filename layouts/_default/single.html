@@ -1,13 +1,18 @@
 {{ define "main" }}
-<div class="fv-single">
-  <div class="layout-single" style="background: {{ .Params.color }}">
-    <header><a href="{{ .Site.BaseURL }}"><i class="fas fa-home"></i></a><i class="fas fa-address-book icon-about"></i></header>
+<div class="fv-single"  style="background: {{ .Params.color }}">
+  <header><a href="{{ .Site.BaseURL }}"><img class="logo" src="../logo.svg"></a><img class="icon-about action" src="../icon_about.svg"></header>
+  <div class="layout-single">
     <div class="column_center">
       <h2>{{ .Params.charge }}</h2>
       <h3>{{ .Date.Format "01.2006" }}</h3>
     </div>
   </div>
-  <img src="/{{ .Params.image }}"/>
+  <img class= "image" src="/{{ .Params.image }}"/>
+</div>
+<div class="sns_link">
+  <img class="icon-sns action" src="../icon_mail.svg">
+  <img class="icon-sns action" src="../icon_facebook.svg">
+  <img class="icon-sns action" src="../icon_linkedin.svg">
 </div>
 <div class="report">
   <h1 class="title" style="color: {{ .Params.color }}">{{ .Title }}</h1>
@@ -15,7 +20,21 @@
      {{ .Content }}
   </article>
 </div>
-<div class="next-project">
-  <h2>Next Project</h2>
+<div class="other-project">
+  {{ with .NextInSection }}
+  <div class="next-project" style="background: {{ .Params.color }}">
+    <object class="name" type="image/svg+xml" data="/{{ .Params.name }}" >{{ .Title }}</object>
+    <a href="{{.Permalink}}"><img class="image" src="/{{ .Params.image }}"/></a>
+    <h2 class= "charge">{{ .Params.charge }}</h2>
+  </div>
+  {{end}}
+  {{ with .PrevInSection }}
+  <div class="prev-project" style="background: {{ .Params.color }}">
+    <object class="name" type="image/svg+xml" data="/{{ .Params.name }}" >{{ .Title }}</object>
+    <a href="{{.Permalink}}"><img class="image" src="/{{.Params.image}}"/></a>
+    <h2 class = "charge">{{ .Params.charge }}</h2>
+  </div>
+  {{end}}
 </div>
+{{- partial "modal.html" . -}}
 {{ end }}

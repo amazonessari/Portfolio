@@ -1,9 +1,9 @@
 {{ define "main" }}
 {{ $postCount := len .Site.RegularPages }}
 <div class="layout">
-  <div class="column_left"><i class="fas fa-angle-left"></i></div>
-  <div class="column_right"><i class="fas fa-angle-right"></i></div>
-  <header><i class="fas fa-address-book icon-about"></i></header>
+  <div class="column_left"><i class="fas fa-angle-left action"></i></div>
+  <div class="column_right"><i class="fas fa-angle-right action"></i></div>
+  <header><img class="logo" src="logo.svg"><img class="icon-about action" src="icon_about.svg"></header>
   {{- partial "footer.html" . -}}
   <div class="column_center">
     <ul class="works" id="{{ $postCount }}">
@@ -11,8 +11,8 @@
         <li class="work" id={{ .Params.color }}>
           <h2>{{ .Params.charge }}</h2>
           <h3>{{ .Date.Format "01.2006" }}</h3>
-          <a href="{{.Permalink}}"><img src="/{{ .Params.image }}"/></a>
-          <h1>{{ .Title }}</h1>
+          <a href="{{.Permalink}}"><img class="image" src="/{{ .Params.image }}"/></a>
+          <object class="name" type="image/svg+xml" data="/{{ .Params.name }}" >{{ .Title }}</object>
         </li>
       {{ end }}
     </ul>

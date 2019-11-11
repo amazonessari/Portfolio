@@ -6,6 +6,7 @@ language: "English"
 charge: "Flyer Design"
 color: "#9CD0DD"
 image: "work0.png"
+name: "name0.svg"
 ---
 
 # Overview
