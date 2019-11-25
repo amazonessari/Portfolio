@@ -4,16 +4,18 @@
 <link rel="stylesheet" href="{{ $style.Permalink }}">
 
 <meta charset="utf-8">
-<link rel="shortcut icon" type="image/png" src="../favicon.png"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+<link rel="shortcut icon" type="image/png" src="../favicon.png" />
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/101/three.min.js"></script>
 
 {{ if not .Site.IsServer }}
 {{ with .Site.GoogleAnalytics }}
 <script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+  function gtag() { dataLayer.push(arguments); }
   gtag('js', new Date());
   gtag('config', '{{ . }}');
 </script>

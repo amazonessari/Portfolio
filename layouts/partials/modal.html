@@ -2,18 +2,51 @@
   <div class="layout">
     <div class="column_left"></div>
     <div class="column_right"></div>
-    <header><img class="logo" src="logo.svg"><img class="icon-close action" src="icon_close.svg"></header>
+    <header>
+      <a href="{{ .Site.BaseURL }}">
+        <svg class="logo" fill="none" height="46" viewBox="0 0 209 46" width="209" xmlns="http://www.w3.org/2000/svg">
+          <g fill="#fff">
+            <path
+              d="m17.228.31786h7.7558l17.1645 45.13614h-9.0273l-4.1957-11.2522h-15.7659l-4.13217 11.2522h-9.02723zm10.108 27.71744-6.2301-17.7366-6.4843 17.7366z" />
+            <path
+              d="m53.4561 45.454v-45.13614h19.9616c2.0767 0 3.9839.445005 5.7215 1.33501 1.78.84763 3.3058 1.99193 4.5772 3.43289 1.2715 1.39859 2.2674 3.00908 2.9879 4.83148.7205 1.78006 1.0807 3.58126 1.0807 5.40366 0 2.9243-.7416 5.5943-2.225 8.01-1.441 2.3734-3.4117 4.0898-5.9122 5.1494l10.2987 16.9737h-9.8537l-9.2179-15.1301h-8.6458v15.1301zm8.773-22.8224h10.9979c.8053 0 1.5469-.1907 2.2251-.5721.7204-.3814 1.335-.89 1.8435-1.5257.5086-.6781.9112-1.4622 1.2079-2.3522s.445-1.8436.445-2.8607c0-1.0596-.1695-2.0343-.5086-2.9244-.339-.89-.8052-1.6528-1.3985-2.2885-.551-.67815-1.2079-1.18673-1.9708-1.52578-.7205-.38143-1.4621-.57215-2.225-.57215h-10.6165z" />
+            <path d="m102.091 45.454v-45.13614h8.773v45.13614z" />
+            <path
+              d="m153.529 12.1423c-.296-.2967-.847-.6993-1.652-1.2079-.763-.5086-1.717-.99597-2.861-1.46217-1.102-.50857-2.31-.93239-3.624-1.27144s-2.649-.50857-4.005-.50857c-2.416 0-4.217.445-5.403 1.33501-1.187.89001-1.78 2.14027-1.78 3.75077 0 .9324.211 1.7164.635 2.3521.466.5934 1.123 1.1231 1.971 1.5893s1.907.8901 3.179 1.2715c1.313.3814 2.818.784 4.513 1.2079 2.204.5933 4.196 1.229 5.976 1.9071 1.822.6781 3.348 1.5257 4.577 2.5429 1.272 1.0171 2.246 2.2462 2.924 3.6872.679 1.3986 1.018 3.1362 1.018 5.2129 0 2.4157-.467 4.4924-1.399 6.23-.89 1.6953-2.119 3.0727-3.687 4.1322-1.526 1.0596-3.306 1.8436-5.34 2.3522-1.992.4662-4.09.6993-6.294.6993-3.39 0-6.738-.5086-10.044-1.5258-3.306-1.0171-6.273-2.4581-8.9-4.3228l3.878-7.5651c.381.3814 1.059.89 2.034 1.5257 1.017.5933 2.204 1.2079 3.56 1.8436 1.356.5933 2.861 1.1019 4.514 1.5257 1.652.4238 3.348.6357 5.085.6357 4.832 0 7.248-1.5469 7.248-4.6407 0-.9748-.276-1.8012-.827-2.4793s-1.335-1.2715-2.352-1.78c-1.017-.5086-2.246-.9748-3.687-1.3986s-3.052-.89-4.832-1.3986c-2.161-.5933-4.047-1.2291-5.658-1.9072-1.568-.7205-2.882-1.5469-3.941-2.4793-1.06-.9747-1.865-2.0767-2.416-3.3057-.508-1.2715-.763-2.776-.763-4.5136 0-2.2886.424-4.32293 1.272-6.10295.847-1.78002 2.013-3.26337 3.496-4.45005 1.526-1.18667 3.285-2.07668 5.277-2.670021 1.992-.635719 4.132-.953579 6.42-.953579 3.179 0 6.103.508576 8.773 1.52573 2.67.97477 5.001 2.14026 6.993 3.49646z" />
+            <path
+              d="m184.08.31786h7.756l17.164 45.13614h-9.027l-4.196-11.2522h-15.766l-4.132 11.2522h-9.027zm10.108 27.71744-6.23-17.7366-6.485 17.7366z" />
+          </g>
+        </svg>
+      </a>
+      <svg class="icon-close action" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24Z"
+          fill="#262626" />
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M12 4C7.576 4 4 7.576 4 12C4 16.424 7.576 20 12 20C16.424 20 20 16.424 20 12C20 7.576 16.424 4 12 4ZM14.072 8.8L12 10.872L9.928 8.8L8.8 9.928L10.872 12L8.8 14.072L9.928 15.2L12 13.128L14.072 15.2L15.2 14.072L13.128 12L15.2 9.928L14.072 8.8ZM5.6 12C5.6 15.528 8.472 18.4 12 18.4C15.528 18.4 18.4 15.528 18.4 12C18.4 8.472 15.528 5.6 12 5.6C8.472 5.6 5.6 8.472 5.6 12Z"
+          fill="white" />
+      </svg>
+    </header>
     {{- partial "footer.html" . -}}
     <div class="column_center">
       <h2>Hello, I am ARISA</h2>
       <h3>2019</h3>
-      <img class = "me" src="me.png">
-      <div class="description">
-        <h4>I design and code.</h4>
-        <p>I have been working as a full-time intern at the start-up <a target="_blank" href="https://sc0ville.com">Scoville</a> in Tokyo since May 2019. Learning strategic designs according to target audiences and purposes through feedback from senior designers. I am committed to every project with massive passion, and do not compromise. I keep to research daily aiming to create a beautifull and dynamic design from any devces. Moreover, strongly interested in creative development. I mainly work on building landing pages at the moment. Please check my report of the works to see my abiliy.</p>
-        <div class="skill-set">
-          <img class="icon" src="icon_tool.svg"><span>Figma</span><span>Illustrator</span><span>Photoshop</span><br>
-          <img class="icon" src="icon_code.svg"><span>HTML</span><span>CSS/SCSS</span><span>JavaScript</span>
+      <div class="allabout">
+        <img class="me" src="me.png">
+        <div class="description">
+          <h4>I design and code.</h4>
+          <p>Born in 1997, in Japan. I, a former backpacker, started my design career from scratch as an intern at the
+            start-up <a target="_blank" href="https://sc0ville.com">Scoville</a> in May 2019. Learning strategic designs
+            according to target
+            audiences and purposes through feedback from senior designers. I am committed to every project with massive
+            passion and
+            do never compromise. Moreover, love creative development as I do both design + code in some projects. Please
+            check my reports!</p>
+          <div class="skill-set">
+            <img class="icon" src="icon_tool.svg"><span>Figma</span><span>Illustrator</span><span>Photoshop</span><br>
+            <img class="icon" src="icon_code.svg"><span>HTML</span><span>CSS/SCSS</span><span>JavaScript</span>
+          </div>
         </div>
       </div>
     </div>

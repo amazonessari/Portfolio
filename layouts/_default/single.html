@@ -1,6 +1,6 @@
 {{ define "main" }}
 <div class="fv-single"  style="background: {{ .Params.color }}">
-  <header><a href="{{ .Site.BaseURL }}"><img class="logo" src="../logo.svg"></a><img class="icon-about action" src="../icon_about.svg"></header>
+  {{- partial "header.html" . -}}
   <div class="layout-single">
     <div class="column_center">
       <h2>{{ .Params.charge }}</h2>
@@ -9,12 +9,7 @@
   </div>
   <img class= "image" src="/{{ .Params.image }}"/>
 </div>
-<div class="sns_link">
-  <img class="icon-sns action" src="../icon_mail.svg">
-  <img class="icon-sns action" src="icon_skype.svg">
-  <img class="icon-sns action" src="../icon_facebook.svg">
-  <img class="icon-sns action" src="../icon_linkedin.svg">
-</div>
+{{- partial "sns-svg.html" . -}}
 <div class="report">
   <h1 class="title" style="color: {{ .Params.color }}">{{ .Title }}</h1>
   <article>
@@ -23,16 +18,18 @@
 </div>
 <div class="other-project">
   {{ with .NextInSection }}
-  <div class="next-project" style="background: {{ .Params.color }}">
-    <object class="name" type="image/svg+xml" data="/{{ .Params.name }}" >{{ .Title }}</object>
+  <div class="next-project">
+    
     <a href="{{.Permalink}}"><img class="image" src="/{{ .Params.image }}"/></a>
+    <h2 class= "title" style="color: {{ .Params.color }}">{{ .Title }}</h2>
     <h2 class= "charge">{{ .Params.charge }}</h2>
   </div>
   {{end}}
   {{ with .PrevInSection }}
-  <div class="prev-project" style="background: {{ .Params.color }}">
-    <object class="name" type="image/svg+xml" data="/{{ .Params.name }}" >{{ .Title }}</object>
+  <div class="prev-project">
+    
     <a href="{{.Permalink}}"><img class="image" src="/{{.Params.image}}"/></a>
+    <h2 class= "title" style="color: {{ .Params.color }}">{{ .Title }}</h2>
     <h2 class = "charge">{{ .Params.charge }}</h2>
   </div>
   {{end}}
