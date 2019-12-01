@@ -4,8 +4,8 @@
 <div class="layout">
   <div class="column_left"><img class="action" src="arrow_left.svg"></div>
   <div class="column_right"><img class="action" src="arrow_right.svg"></div>
-  {{- partial "header.html" . -}}
-  {{- partial "footer.html" . -}}
+  <header>{{- partial "header.html" . -}}</header>
+  <footer>{{- partial "footer.html" . -}}</footer>
 
   <div class="column_center">
     <ul class="works" id="{{ $postCount }}">
@@ -13,7 +13,7 @@
       <li class="work" id={{ .Params.color }}>
         <h2>{{ .Params.charge }}</h2>
         <h3>{{ .Date.Format "01.2006" }}</h3>
-        <a class="image" href="{{.Permalink}}"><img src="{{ .Params.image }}"></a>
+        <a class="image" href="{{.Permalink}}"><img src="/{{ .Params.image }}"></a>
         <div class="name" data-src="/{{ .Params.name }}"></div>
       </li>
       {{ end }}

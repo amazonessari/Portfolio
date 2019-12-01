@@ -9,4 +9,22 @@ image: "work1.png"
 name: "name1.svg"
 ---
 
-**Insert Lead paragraph here.**
+
+# Overview
+
+GeekSalon is a programming school for uni students from the company.
+I designed a landing page for trial events as an assignment then it ends up to be real. This was my first time to work with coding.
+
+
+# My role
+
+* Research - GeekSalon / fundamentals of design / HTML / CSS / jQuery
+* Wireframe - All the contents without color or assets in Figma
+* Design - Static design including color and assets
+* Code - HTML / CSS / jQuery
+
+
+# Members
+
+* Tetsuji Higashi - Backend engineer
+* Arashi Kawaguchi - Backend engineer

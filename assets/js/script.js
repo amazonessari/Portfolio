@@ -1,86 +1,118 @@
 //Home transition
-var length = document.querySelector(".works").getAttribute("id") - 1;
-var imageSlide = document.getElementsByClassName("works")[0].getElementsByTagName("li");
-var nowIndex = 0;
-imageSlide[nowIndex].classList.add("show");
-var slideTimer;
-TweenMax.fromTo(".bar", 5, { width: "0%" }, { width: "100%", ease: "Linear" });
-var getColor = imageSlide[nowIndex].getAttribute("id");
-document.body.style.backgroundColor = getColor;
-
-function sliderSlide(val) {
+const works = document.querySelector('.works');
+if (works) {
+	const prevButton = document.querySelector('.column_left');
+	const nextButton = document.querySelector('.column_right');
+	const work = document.querySelectorAll(".work");
+	var length = works.getAttribute("id") - 1;
+	var nowIndex = 0;
+	work[nowIndex].classList.add("show");
 	TweenMax.fromTo(".bar", 5, { width: "0%", ease: "Linear" }, { width: "100%", ease: "Linear" });
-	isChanging = true;
-	imageSlide[nowIndex].classList.remove("show");
-	nowIndex = val;
-	imageSlide[nowIndex].classList.add("show");
-	getColor = imageSlide[nowIndex].getAttribute("id");
+	var getColor = work[nowIndex].getAttribute("id");
 	document.body.style.backgroundColor = getColor;
+
+	function sliderSlide(val) {
+		TweenMax.fromTo(".bar", 5, { width: "0%", ease: "Linear" }, { width: "100%", ease: "Linear" });
+		prevButton.disabled = true;
+		nextButton.disabled = true;
+		work[nowIndex].classList.remove("show");
+		nowIndex = val;
+		work[nowIndex].classList.add("show");
+		getColor = work[nowIndex].getAttribute("id");
+		document.body.style.backgroundColor = getColor;
+	}
+	function slidePrev() {
+		const itemToMove = works.removeChild(works.lastElementChild);
+		works.prepend(itemToMove);
+		var index = nowIndex - 1;
+		if (index < 0) {
+			index = length;
+		}
+		sliderSlide(index);
+		works.classList.add('sliding-right');
+	}
+	function slideNext() {
+		const itemToMove = works.removeChild(works.firstElementChild);
+		works.append(itemToMove);
+		var index = nowIndex + 1;
+		if (index > length) {
+			index = 0;
+		}
+		sliderSlide(index);
+		works.classList.add('sliding-left');
+	}
+
+	//clicking arrow
+	prevButton.addEventListener("click", slidePrev, false);
+	nextButton.addEventListener("click", slideNext, false);
+
+	//auto
+	setInterval(slideNext, 5000);
+
+	//reset sliding class
+	works.addEventListener('animationend', () => {
+		nextButton.disabled = false;
+		prevButton.disabled = false;
+		works.classList.remove('sliding-left', 'sliding-right');
+	})
+
+	//SP
+	window.addEventListener("load", function (event) {
+		var touchStartX;
+		var touchStartY;
+		var touchMoveX;
+		var touchMoveY;
+
+		window.addEventListener("touchstart", function (event) {
+			event.preventDefault();
+			touchStartX = event.touches[0].pageX;
+			touchStartY = event.touches[0].pageY;
+		}, false);
+
+		window.addEventListener("touchmove", function (event) {
+			event.preventDefault();
+			touchMoveX = event.changedTouches[0].pageX;
+			touchMoveY = event.changedTouches[0].pageY;
+		}, false);
+
+		if (touchStartX > touchMoveX) {
+			if (touchStartX > (touchMoveX + 50)) {
+				window.addEventListener("touchend", slideNext, false);
+			}
+		} else if (touchStartX < touchMoveX) {
+			if ((touchStartX + 50) < touchMoveX) {
+				window.addEventListener("touchend", slidePrev, false);
+			}
+		}
+	}, false);
 }
-
-//Home transition | auto
-setInterval(function () {
-	var index = nowIndex + 1;
-	if (index > length) {
-		index = 0;
-	}
-	sliderSlide(index);
-}, 5000);
-
-//Home transition | clicking arrow
-document.querySelector(".column_left").addEventListener("click", function () {
-	var index = nowIndex - 1;
-	if (index < 0) {
-		index = length;
-	}
-	sliderSlide(index);
-}, false);
-document.querySelector(".column_right").addEventListener("click", function () {
-	var index = nowIndex + 1;
-	if (index > length) {
-		index = 0;
-	}
-	sliderSlide(index);
-}, false);
 
 
 //Modal
-var abouts = document.querySelectorAll(".icon-about");
-var closes = document.querySelectorAll(".icon-close");
-var modals = document.querySelectorAll(".modal");
+var about = document.querySelector(".icon-about");
+var close = document.querySelector(".icon-close");
+var modal = document.querySelector(".modal");
 
-abouts.forEach(function (about) {
-	about.addEventListener("click", function () {
-		modals.forEach(function (modal) {
-			modal.classList.add("show");
-		});
-	});
+
+
+about.addEventListener("click", function () {
+	modal.classList.add("show");
 });
-closes.forEach(function (close) {
-	close.addEventListener("click", function () {
-		modals.forEach(function (modal) {
-			modal.classList.remove("show");
-		});
-	});
+close.addEventListener("click", function () {
+	modal.classList.remove("show");
 });
 
 
-//Name animation
+//Name
 var nameDivs = document.querySelectorAll(".name");
-nameDivs.forEach(function (nameDiv) {
+if (nameDivs) {
+	nameDivs.forEach(function (nameDiv) {
 
-	var xhr = new XMLHttpRequest();
-	xhr.addEventListener("load", function () {
-		nameDiv.innerHTML = xhr.responseText;
+		var xhr = new XMLHttpRequest();
+		xhr.addEventListener("load", function () {
+			nameDiv.innerHTML = xhr.responseText;
+		});
+		xhr.open("GET", nameDiv.getAttribute("data-src"));
+		xhr.send();
 	});
-	xhr.open("GET", nameDiv.getAttribute("data-src"));
-	xhr.send();
-});
-
-
-//three js
-window.addEventListener("DOMContentLoaded", init);
-
-function init() {
-	// ここに処理を追加していきます
 }

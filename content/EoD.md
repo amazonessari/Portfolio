@@ -9,4 +9,23 @@ image: "work2.png"
 name: "name2.svg"
 ---
 
-**Insert Lead paragraph here.**
+
+
+# Overview
+The first corporate site for the new company EoD
+Contents -  Prepared by clients
+
+
+# My role
+* Research - About the tool studio and competitors
+* Wireframe - All the contents without color or assets in Studio
+* Design - Static design including color and assets
+* PPT - PowerPoint template linked with the LP design
+
+
+# Members
+* Fumiya Sorimachi - Mentor
+* Takuya Shiomi - Director
+
+
+# Process

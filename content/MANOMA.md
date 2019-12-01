@@ -9,8 +9,10 @@ image: "work0.png"
 name: "name0.svg"
 ---
 
-# Overview
 
+{{< figure src="/MANOMA/1.png">}}
+
+# Overview
 MANOMA is a new smart home service provided by SONY. It equips with Amazon Alexa to enable
 voice control, and by inserting LTE SIM, you can easily have a wireless Internet environment without
 any settings. Our company sells it targeting 20’s. I designed a flyer to be used for a product
@@ -27,6 +29,7 @@ The main reason why I came to design was because the previous design did not hav
 contents. Therefore, we decided to focus on the main appeal point “Switch cheap and easily".
 
 ## Sketch both on a paper and a screen
+
 These are rough sketches I made based on the form that I received from the director.
 On the front, it has the image of the device only plugged in as main to tell “easy”. The benefits are
 simply summarized into 3 on the bottom. On the other hand, on the back I have placed a frame of a
@@ -41,6 +44,9 @@ of a professional look and an inconspicuous product. Thus, I ended up to process
 Illustrator to realize the draft.
 As a result we adopted a design with a plain color as a background to prioritize cheapness
 considering our target audience.
+
+{{< figure src="/MANOMA/2.png">}}
+
 
 ## Pricing table with effort
 Actually I found it the hardest to make a pricing table. It has to be plain and look good deal, but I

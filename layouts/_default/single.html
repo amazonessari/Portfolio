@@ -1,36 +1,35 @@
 {{ define "main" }}
-<div class="fv-single"  style="background: {{ .Params.color }}">
-  {{- partial "header.html" . -}}
+<div class="fv-single" style="background: {{ .Params.color }}">
+  <header>{{- partial "header.html" . -}}</header>
   <div class="layout-single">
     <div class="column_center">
       <h2>{{ .Params.charge }}</h2>
       <h3>{{ .Date.Format "01.2006" }}</h3>
     </div>
   </div>
-  <img class= "image" src="/{{ .Params.image }}"/>
+  <img class="image" src="/{{ .Params.image }}" />
 </div>
-{{- partial "sns-svg.html" . -}}
 <div class="report">
   <h1 class="title" style="color: {{ .Params.color }}">{{ .Title }}</h1>
   <article>
-     {{ .Content }}
+    {{ .Content }}
   </article>
 </div>
 <div class="other-project">
   {{ with .NextInSection }}
   <div class="next-project">
-    
-    <a href="{{.Permalink}}"><img class="image" src="/{{ .Params.image }}"/></a>
-    <h2 class= "title" style="color: {{ .Params.color }}">{{ .Title }}</h2>
-    <h2 class= "charge">{{ .Params.charge }}</h2>
+
+    <a href="{{.Permalink}}"><img class="image" src="/{{ .Params.image }}" /></a>
+    <h2 class="title" style="color: #262626">{{ .Title }}</h2>
+    <h2 class="charge">{{ .Params.charge }}</h2>
   </div>
   {{end}}
   {{ with .PrevInSection }}
   <div class="prev-project">
-    
-    <a href="{{.Permalink}}"><img class="image" src="/{{.Params.image}}"/></a>
-    <h2 class= "title" style="color: {{ .Params.color }}">{{ .Title }}</h2>
-    <h2 class = "charge">{{ .Params.charge }}</h2>
+
+    <a href="{{.Permalink}}"><img class="image" src="/{{.Params.image}}" /></a>
+    <h2 class="title" style="color: #262626">{{ .Title }}</h2>
+    <h2 class="charge">{{ .Params.charge }}</h2>
   </div>
   {{end}}
 </div>
