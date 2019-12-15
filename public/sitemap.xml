@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>http://example.org/</loc>
+    <lastmod>2019-11-08T11:45:17+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/progrit/</loc>
+    <lastmod>2019-11-08T11:45:17+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/portfolio-site/</loc>
+    <lastmod>2019-10-27T22:59:02+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/eod/</loc>
+    <lastmod>2019-10-27T22:58:39+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/geeksalon/</loc>
+    <lastmod>2019-09-27T22:58:27+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/manoma/</loc>
+    <lastmod>2019-08-27T22:57:55+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/</loc>
+  </url>
+  
+</urlset>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ARIFOLIO</title>
+    <link>http://example.org/</link>
+    <description>Recent content on ARIFOLIO</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 08 Nov 2019 11:45:17 +0900</lastBuildDate>
+    
+	<atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>PROGRIT</title>
+      <link>http://example.org/progrit/</link>
+      <pubDate>Fri, 08 Nov 2019 11:45:17 +0900</pubDate>
+      
+      <guid>http://example.org/progrit/</guid>
+      <description>Overview This is a landing page for the internship recruitment of our external client.
+My role Research Researched on the company
+Wireframe Made the contents in Figma
+Design Designed the static page in Figma
+Code Coded in HTML, SCSS with the web application bundler Parcel
+Launch Deployed the repository on the server of our client
+Team Fumiya Sorimachi - Mentor Designer Gave me a feedback
+Process &amp;mdash; Preparing &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>Portfolio Site</title>
+      <link>http://example.org/portfolio-site/</link>
+      <pubDate>Sun, 27 Oct 2019 22:59:02 +0900</pubDate>
+      
+      <guid>http://example.org/portfolio-site/</guid>
+      <description>Overview It is my first portfolio website that I designed and coded entirely to show my work. Built by open-source static site generators HUGO.
+My role Research Researched on award winners websites, HUGO, and JavaScript
+Wireframe Made all the contents in Figma
+Design Designed the static page in Figma
+Code Coded in HTML, SCSS, and pure JavaScript with HUGO
+Process &amp;mdash; Preparing &amp;mdash;</description>
+    </item>
+    
+    <item>
+      <title>EoD</title>
+      <link>http://example.org/eod/</link>
+      <pubDate>Sun, 27 Oct 2019 22:58:39 +0900</pubDate>
+      
+      <guid>http://example.org/eod/</guid>
+      <description>Overview EoD is a coaching firm specialized in leadership development. I designed the first official website for them with the design tool Studio.
+My role Research About EoD and Studio
+Design Static design in the tool Studio
+Team Fumiya Sorimachi - Mentor Designer Gave me a feedback
+Takuya Shiomi - Director Prepared contents
+Process Because EoD is our sister company, the client was committed as a director. We used the web design tool Studio for them to feel free to edit content after delivery.</description>
+    </item>
+    
+    <item>
+      <title>GeekSalon</title>
+      <link>http://example.org/geeksalon/</link>
+      <pubDate>Fri, 27 Sep 2019 22:58:27 +0900</pubDate>
+      
+      <guid>http://example.org/geeksalon/</guid>
+      <description>Overview GeekSalon is a programming school for university students by our company. I designed a landing page for the trial event limited to female students.
+My role Research Researched about GeekSalon, HTML, CSS, JavaScript
+Wireframe Made all the contents in Figma
+Design Designed the static page in Figma
+Code Coded in HTML, CSS, and JavaScript
+Team Gordon Miyamoto - Senior Designer Gave me a feedback
+Fumiya Sorimachi - Mentor Designer Gave me a feedback</description>
+    </item>
+    
+    <item>
+      <title>MANOMA</title>
+      <link>http://example.org/manoma/</link>
+      <pubDate>Tue, 27 Aug 2019 22:57:55 +0900</pubDate>
+      
+      <guid>http://example.org/manoma/</guid>
+      <description>Overview MANOMA is a new smart home service provided by SONY. It equips with Amazon Alexa to enable voice control, and by inserting LTE SIM, you can easily have a wireless Internet environment without any settings. Our company sells it targeting 20’s. I designed a flyer as product descriptions used in face-to-face sales.
+My role Research Researched on MANOMA, fundamentals of design, Photoshop, and Illustrator
+Making a survey form Made a customer survey form on Google Spreadsheet that is comprehensive in many kinds of designs</description>
+    </item>
+    
+  </channel>
+</rss>

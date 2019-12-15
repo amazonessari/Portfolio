@@ -26,13 +26,13 @@
   {{ end }}
 
   <title>{{ $.Site.Title }}</title>
-  <link rel="shortcut icon" type="image/png" href="/static/favicon.png" />
+  <link rel="shortcut icon" type="image/png" href="/favicon.png" />
 
-  <meta property="og:url" content=" ページの URL" />
+  <meta property="og:url" content="{{ .Site.BaseURL }}" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="HOME of ARIFOLIO" />
+  <meta property="og:title" content="HOME" />
   <meta property="og:description" content="The designer ARISA's portfolio" />
   <meta property="og:site_name" content="ARIFOLIO" />
-  <meta property="og:image" content="/static/OGP.png" />
+  <meta property="og:image" content="{{ .Site.BaseURL }}/OGP.png" />
 
 </head>

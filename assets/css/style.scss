@@ -166,8 +166,9 @@ body{
     justify-content: center;
     &:hover{
     .arrow path{
-        animation-play-state: paused;
+        stroke-dashoffset: 0;
         stroke-width: 3;
+        animation: none;
     }
    }
   }
@@ -627,6 +628,9 @@ Modal
   &.show{
     opacity: 1;
     top: 0;
+  }
+  .column_left, .column_right{
+    cursor: default;
   }
   .column_center{
     overflow: auto;
