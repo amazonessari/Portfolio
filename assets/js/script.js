@@ -56,35 +56,38 @@ if (works) {
 		works.classList.remove('sliding-left', 'sliding-right');
 	})
 
-	//SP
-	window.addEventListener("load", function (event) {
-		var touchStartX;
-		var touchStartY;
-		var touchMoveX;
-		var touchMoveY;
-
-		window.addEventListener("touchstart", function (event) {
-			event.preventDefault();
-			touchStartX = event.touches[0].pageX;
-			touchStartY = event.touches[0].pageY;
-		}, false);
-
-		window.addEventListener("touchmove", function (event) {
-			event.preventDefault();
-			touchMoveX = event.changedTouches[0].pageX;
-			touchMoveY = event.changedTouches[0].pageY;
-		}, false);
-
-		if (touchStartX > touchMoveX) {
-			if (touchStartX > (touchMoveX + 50)) {
-				window.addEventListener("touchend", slideNext, false);
+	/*
+		//SP
+		window.addEventListener("load", function (event) {
+			var touchStartX;
+			var touchStartY;
+			var touchMoveX;
+			var touchMoveY;
+	
+			window.addEventListener("touchstart", function (event) {
+				event.preventDefault();
+				touchStartX = event.touches[0].pageX;
+				touchStartY = event.touches[0].pageY;
+			}, false);
+	
+			window.addEventListener("touchmove", function (event) {
+				event.preventDefault();
+				touchMoveX = event.changedTouches[0].pageX;
+				touchMoveY = event.changedTouches[0].pageY;
+			}, false);
+	
+			if (touchStartX > touchMoveX) {
+				if (touchStartX > (touchMoveX + 50)) {
+					window.addEventListener("touchend", slideNext, false);
+				}
+			} else if (touchStartX < touchMoveX) {
+				if ((touchStartX + 50) < touchMoveX) {
+					window.addEventListener("touchend", slidePrev, false);
+				}
 			}
-		} else if (touchStartX < touchMoveX) {
-			if ((touchStartX + 50) < touchMoveX) {
-				window.addEventListener("touchend", slidePrev, false);
-			}
-		}
-	}, false);
+		}, false);
+	*/
+
 }
 
 
@@ -92,8 +95,6 @@ if (works) {
 var about = document.querySelector(".icon-about");
 var close = document.querySelector(".icon-close");
 var modal = document.querySelector(".modal");
-
-
 
 about.addEventListener("click", function () {
 	modal.classList.add("show");

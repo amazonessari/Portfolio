@@ -10,19 +10,40 @@
 
 $breakpoint: 768px !default;
 
+
+/*////////
+Components
+////////*/
+
 .action{
   font-size: 16px;
   cursor: pointer;
   transition: all 0.2s ease-out;
   padding: 8px;
   width: auto;
-  height: 32px;
   &:hover{
     transform: scale(1.2);
   }
 }
 
-//Home page
+.arrow path{
+  //52.56546
+  stroke-dasharray: 52;
+  stroke-dashoffset: 52;
+  transition: all 0.3s ease-out;
+  animation: line-anim 3s ease-out infinite;
+  @keyframes line-anim{
+    0%{ stroke-dashoffset: 52; }
+    30%{ stroke-dashoffset: 0; }
+    100%{ stroke-dashoffset: 0; }
+  }
+}
+
+
+/*////////
+index
+////////*/
+
 body{
   width: 100%;
   height: 100%;
@@ -38,12 +59,64 @@ body{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  a{
+    height: 100%;
+  }
   .logo{
-    height: 16px;
-    width: auto;
+    height: 80px;
+    &:hover{
+      path:nth-of-type(1){
+        animation: logo-anim 0.5s ease-out alternate;
+      }
+      path:nth-of-type(2){
+        animation: logo-anim 0.5s ease-out alternate 0.03s;
+      }
+      path:nth-of-type(3){
+        animation: logo-anim 0.5s ease-out alternate 0.06s;
+      }
+      path:nth-of-type(4){
+        animation: logo-anim 0.5s ease-out alternate 0.09s;
+      }
+      path:nth-of-type(5){
+        animation: logo-anim 0.5s ease-out alternate 0.12s;
+      }
+      path:nth-of-type(6){
+        animation: logo-anim 0.5s ease-out alternate 0.15s;
+      }
+      path:nth-of-type(7){
+        animation: logo-anim 0.5s ease-out alternate 0.18s;
+      }
+      path:nth-of-type(8){
+        animation: logo-anim 0.5s ease-out alternate 0.21s;
+      }
+      @keyframes logo-anim {
+        0%{
+          transform: translateY(0);
+          opacity: 1;
+        }
+        50%{
+          transform: translateY(16px);
+          opacity: 0;
+        }
+        100%{
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+    }
   }
   .icon-about{
     letter-spacing: 0.1em;
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    &:hover{
+      letter-spacing: 0.2em;
+      font-weight: bold;
+    }
   }
 }
 
@@ -84,18 +157,23 @@ body{
       z-index: 10;
     }
   }
-  .column_left{
-    grid-area: column_left;
+  .column_left, .column_right{
     width: 80px;
-    place-self: center;
-    text-align: center;
+    height: 100%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:hover{
+    .arrow path{
+        animation-play-state: paused;
+        stroke-width: 3;
+    }
+   }
   }
-  .column_right{
-    grid-area: column_right;
-    width: 80px;
-    place-self: center;
-    text-align: center;
-  }
+
+  .column_left{grid-area: column_left;}
+  .column_right{grid-area: column_right;}
 
   .column_center{
     grid-area: column_center;
@@ -133,7 +211,6 @@ body{
         }
       .work{
         flex-shrink: 0;
-        width: 0%;
         position: relative;
         opacity: 0;
         width: 200%;
@@ -171,7 +248,7 @@ body{
             transition: all 0.3s ease-out;
             z-index: 100;
             &:hover{
-              transform: translate(-50%, -50%) scale(1.1);
+              transform: translate(-50%, -50%) scale(1.03);
               z-index: 100;
             }
           }
@@ -189,14 +266,16 @@ body{
       }
     }
   }
-
-  .bar{
-    background: var(--color-white);
-    position: absolute;
-    height: 2px;
-    left: 0;
-    bottom: 0;
-    z-index: 10;
+  .bar-container{
+      position: absolute;
+      width: 100%;
+      height: 82px;
+      left: 0;
+      bottom: 0px;
+      padding: 0 80px;
+    .bar{
+      border-top: 2px solid var(--color-white);
+    }
   }
   @media screen and (max-width: $breakpoint) {
     grid-template-columns: 100%;
@@ -242,6 +321,9 @@ body{
         }
       }
     }
+    .bar-container{
+      padding: 0;
+    }
   }
 }
 
@@ -255,13 +337,11 @@ body{
 }
 
 
-//Single page
-.fv-single{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+/*////////
+Single page
+////////*/
 
+header{
   .header{
     height: 80px;
     width: 100%;
@@ -271,9 +351,21 @@ body{
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 10;
+    z-index: 100;
     padding: 0 80px;
+    @media screen and (max-width: $breakpoint) {
+      padding: 0 16px;
+
+    }
   }
+}
+
+.fv-single{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
   .layout-single{
     height: 400px;
     width: 100%;
@@ -299,18 +391,7 @@ body{
       }
     }
   }
-  .image{
-    width: 50%;
-    position: absolute;
-    top: 200px;
-    left: 50%;
-    z-index: 1;
-    transform: translateX(-50%);
-  }
   @media screen and (max-width: $breakpoint) {
-    .header{
-      padding: 0 16px;
-    }
     .layout-single{
       height: 240px;
       padding: 0;
@@ -328,78 +409,138 @@ body{
         }
       }
     }
-    .image{
-      width: 100%;
-      top: 160px;
-    }
   }
 }
 
 .report{
-  padding: 640px 0 80px;
-  .title{
-    text-align:center;
-    margin: auto 0;
-    font-size: 10vw;
-    padding: 120px 0;
+  padding: 200px 0 80px;
+  text-align: center;
+  .image{
+  width: 50%;
+  @media screen and (max-width: $breakpoint) {
+      width: 100%;
+      top: 160px;
+    }
   }
   article{
     width: 100%;
-    //max-width: 800px;
-    margin: 0 auto;
     line-height: 200%;
     color: var(--color-about);
     text-align: center;
+    padding: 0 80px;
     h1{
       display: inline-block;
       text-align: left;
-      width: 100%;
+      width: calc(100% - 160px);
       max-width: 800px;
       font-size: 80px;
-      padding: 80px 0 40px;
-      border-bottom: 1px solid;
-      margin: 80px 80px 56px;
+      padding:  0;
+      border-bottom: 1px solid var(--color-about);
+      margin: 80px 0 40px;
+      line-height: 170%;
+      letter-spacing: 0.03em;
     }
     h2{
       display: inline-block;
       text-align: left;
-      width: 100%;
+      width: calc(100% - 160px);
       max-width: 800px;
-      font-size: 40px;
-      margin: 0 80px 32px;
+      font-size: 32px;
+      margin-top: 16px;
+      line-height: 170%;
+      letter-spacing: 0.03em;
     }
     h3{
       display: inline-block;
       text-align: left;
-      width: 100%;
+      width: calc(100% - 160px);
       max-width: 800px;
       font-size: 24px;
-      margin: 0 80px;
+      margin: 8px 0;
+      line-height: 170%;
+      letter-spacing: 0.03em;
     }
     h4{
       display: inline-block;
       text-align: left;
-      width: 100%;
+      width: calc(100% - 160px);
       max-width: 800px;
       font-size: 16px;
       font-weight: bold;
       margin: 0 80px;
+      line-height: 170%;
+      letter-spacing: 0.03em;
     }
     p{
       display: inline-block;
       text-align: left;
-      width: 100%;
+      width: calc(100% - 160px);
       max-width: 800px;
-      font-size: 16px;
-      margin: 0 80px 80px;
+      font-size: 18px;
+      margin: 8px 0 40px;
+      line-height: 170%;
+      letter-spacing: 0.03em;
     }
     ul{
       display: inline-block;
       text-align: left;
       width: 100%;
       max-width: 800px;
+      font-size: 18px;
+      padding: 16px 0 40px;
+      margin-bottom: 80px;
+      line-height: 170%;
+      li{
+        list-style-type: square;
+      }
+    }
+    img{
+      width: 100%;
+      max-width: 800px;
+      margin: 40px auto;
+    }
+  }
+  @media screen and (max-width: $breakpoint) {
+    padding: 200px 0 16px;
+    line-height: 200%;
+    .title{
+    font-size: 40px;
+    }
+    article{
+    text-align: center;
+    padding: 0;
+    h1{
+      font-size: 40px;
+      padding: 0;
+      margin: 48px 0px 16px;
+      width: calc(100% - 32px);
+    }
+    h2{
+      font-size: 24px;
+      margin-top: 16px;
+      width: calc(100% - 32px);
+    }
+    h3{
+      font-size: 24px;
+      margin: 0;
+      width: calc(100% - 32px);
+    }
+    h4{
       font-size: 16px;
-      margin: 0 80px 80px;
+      font-weight: bold;
+      margin: 0;
+      width: calc(100% - 32px);
+    }
+    p{
+      font-size: 16px;
+      margin: 4px 0 16px;
+      width: calc(100% - 32px);
+    }
+    ul{
+      font-size: 16px;
+      margin-bottom: 80px;
+      padding: 0;
+      width: calc(100% - 32px);
       li{
         list-style-type: square;
       }
@@ -409,37 +550,6 @@ body{
       margin: 40px auto;
     }
   }
-  @media screen and (max-width: $breakpoint) {
-    padding: 200px 16px 16px;
-    line-height: 200%;
-    .title{
-    font-size: 40px;
-    padding: 240px 0 0;
-    }
-    article{
-      max-width: auto;
-      h1{
-        font-size: 32px;
-        padding: 40px 0 20px;
-        margin: 40px 0 32px;
-      }
-      h2{
-        font-size: 24px;
-        margin-bottom: 16px;
-      }
-      h3{
-        font-size: 24px;
-        font-weight: bold;
-      }
-      h4{
-        font-size: 14px;
-        font-weight: bold;
-      }
-      p{
-        font-size: 14px;
-        margin-bottom: 80px;
-      }
-    }
   }
 }
 .other-project{
@@ -454,18 +564,23 @@ body{
     padding: 40px;
     line-height: 200%;
     font-family: var(--font-en-title);
+    .arrow{
+      height: 100%;
+      float: left;
+    }
     .image{
       max-height: 50%;
       max-width: 80%;
       transition: all 0.3s ease-out;
        &:hover{
-        transform: scale(1.1);
+        transform: scale(1.03);
       }
     }
     .title{
       font-size: 40px;
-      margin: 24px 0 8px;
+      margin: 0 0 24px;
       letter-spacing: 0.1em;
+      color: var(--color-about);
     }
     .charge{
       font-size: 16px;
@@ -494,14 +609,16 @@ body{
 }
 
 
+/*////////
+Modal
+////////*/
 
-//Modal
 .modal{
   background-color: var(--color-about);
   position: fixed;
   top: -100%;
   left: 0;
-  z-index: 100;
+  z-index: 150;
   width: 100%;
   height : 100vh;
   overflow: hidden;
@@ -511,9 +628,9 @@ body{
     opacity: 1;
     top: 0;
   }
-
   .column_center{
     overflow: auto;
+
     h2{
       font-size: 5vw;
       position: absolute;
@@ -538,7 +655,7 @@ body{
       .me{
         height: 80%;
         object-fit: contain;
-        margin-top: 16px;
+        margin: 16px;
       }
       .description{
         min-width: 560px;
@@ -555,9 +672,12 @@ body{
           margin-bottom: 8px;
           font-family: var(--font-en-text);
           text-decoration: none;
+          letter-spacing: 0.05em;
+          line-height: 170%;
         }
         a{
           padding: 0;
+          transition: all 0.3s ease-out;
           &:hover{
             border-bottom: 2px solid var(--color-white);
           }
@@ -566,6 +686,7 @@ body{
         .skill-set{
           font-size: 16px;
           color: var(--color-halfwhite);
+          margin-top: 16px;
           .icon{
             width: 24px;
             display: inline-block;

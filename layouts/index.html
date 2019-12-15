@@ -1,9 +1,16 @@
 {{ define "main" }}
 {{ $postCount := len .Site.RegularPages }}
-<div class="loading"> </div>
 <div class="layout">
-  <div class="column_left"><img class="action" src="arrow_left.svg"></div>
-  <div class="column_right"><img class="action" src="arrow_right.svg"></div>
+  <div class="column_left">
+    <svg class="arrow" width="43" height="11" viewBox="0 0 43 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M43 9.66667H16.3333H3L11.6667 1" stroke="white" stroke-width="1" />
+    </svg>
+  </div>
+  <div class="column_right">
+    <svg class="arrow" width="43" height="11" viewBox="0 0 43 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 9.66667H26.6667H40L31.3333 1" stroke="white" stroke-width="1" />
+    </svg>
+  </div>
   <header>{{- partial "header.html" . -}}</header>
   <footer>{{- partial "footer.html" . -}}</footer>
 
@@ -19,8 +26,9 @@
       {{ end }}
     </ul>
   </div>
-  <ul class="bar">
-  </ul>
+  <div class="bar-container">
+    <div class="bar"></div>
+  </div>
 </div>
 {{- partial "modal.html" . -}}
 {{ end }}

@@ -4,7 +4,7 @@ This is my portfolio site that I designed from scratch
 
 ## Getting Started
 
-This website is built by Hugo - Open-source static site generators
+It is built by open-source static site generators HUGO.
 
 ### Install Hugo
 

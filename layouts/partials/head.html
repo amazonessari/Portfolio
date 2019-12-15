@@ -9,7 +9,6 @@
   <link rel="stylesheet" href="{{ $style.Permalink }}">
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" defer></script>
-  <script src="anime.min.js" defer></script>
   {{ $script := resources.Get "js/script.js" | minify | fingerprint -}}
   <script src="{{ $script.Permalink }}" defer
     {{ printf "integrity=%q" $script.Data.Integrity | safeHTMLAttr }}></script>
