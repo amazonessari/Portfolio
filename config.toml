@@ -1,7 +1,7 @@
-baseURL = "http://example.org/"
+baseURL = "https://amazonessari.github.io/"
 languageCode = "en-us"
 title = "ARIFOLIO"
-relativeurls = true
+relativeurls = false
 googleAnalytics = ""
 
 [params]

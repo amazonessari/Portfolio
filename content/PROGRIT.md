@@ -24,7 +24,7 @@ Designed the static page in Figma
 Coded in HTML, SCSS with the web application bundler Parcel
 ## Launch
 Deployed the repository on the server of our client
-
+{{< figure src="/progrit/calendar.png">}}
 
 # Team
 

@@ -43,4 +43,4 @@ It was my first design job after working on assignments from my senior designer 
 
 --- Preparing ---
 
-{{< figure src="/MANOMA/1.png">}}
+{{< figure src="/manoma/1.png">}}

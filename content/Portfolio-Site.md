@@ -26,5 +26,4 @@ Coded in HTML, SCSS, and pure JavaScript with HUGO
 
 
 # Process
-
---- Preparing ---
+I made this portfolio website to expand job opportunities with attaching to my resume. Thus I prioritized my works themself the most that cannot be conveyed in documents. Also, since I am neither experienced nor educated yet, it is my strategy to let you focus on what I have created.

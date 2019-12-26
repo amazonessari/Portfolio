@@ -18,14 +18,14 @@
   {{ with .NextInSection }}
   <div class="next-project">
     <h2 class="title">Next</h2>
-    <a href="{{.Permalink}}"><img class="image" src="/{{ .Params.image }}" /></a>
+    <a href="{{ .Permalink }}"><img class="image" src="/{{ .Params.image }}" /></a>
     <p class="charge">{{ .Params.charge }}</p>
   </div>
   {{end}}
   {{ with .PrevInSection }}
   <div class="prev-project">
     <h2 class="title">Prev</h2>
-    <a href="{{.Permalink}}"><img class="image" src="/{{.Params.image}}" /></a>
+    <a href="{{ .Permalink }}"><img class="image" src="/{{.Params.image}}" /></a>
     <p class="charge">{{ .Params.charge }}</p>
   </div>
   {{end}}

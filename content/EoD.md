@@ -21,6 +21,7 @@ About EoD and Studio
 ## Design
 Static design in the tool Studio
 
+{{< figure src="/eod/calendar.png">}}
 
 # Team
 

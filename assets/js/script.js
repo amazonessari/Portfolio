@@ -1,15 +1,16 @@
 //Home transition
 const works = document.querySelector('.works');
 if (works) {
-	const prevButton = document.querySelector('.column_left');
-	const nextButton = document.querySelector('.column_right');
-	const work = document.querySelectorAll(".work");
+	var prevButton = document.querySelector('.column_left');
+	var nextButton = document.querySelector('.column_right');
+	var work = document.querySelectorAll(".work");
 	var length = works.getAttribute("id") - 1;
 	var nowIndex = 0;
 	work[nowIndex].classList.add("show");
 	TweenMax.fromTo(".bar", 5, { width: "0%", ease: "Linear" }, { width: "100%", ease: "Linear" });
 	var getColor = work[nowIndex].getAttribute("id");
 	document.body.style.backgroundColor = getColor;
+	work[0].insertAdjacentHTML('afterbegin', '<h4 class="new">NEW</h4>');
 
 	function sliderSlide(val) {
 		TweenMax.fromTo(".bar", 5, { width: "0%", ease: "Linear" }, { width: "100%", ease: "Linear" });
@@ -56,37 +57,35 @@ if (works) {
 		works.classList.remove('sliding-left', 'sliding-right');
 	})
 
-	/*
-		//SP
-		window.addEventListener("load", function (event) {
-			var touchStartX;
-			var touchStartY;
-			var touchMoveX;
-			var touchMoveY;
-	
-			window.addEventListener("touchstart", function (event) {
-				event.preventDefault();
-				touchStartX = event.touches[0].pageX;
-				touchStartY = event.touches[0].pageY;
-			}, false);
-	
-			window.addEventListener("touchmove", function (event) {
-				event.preventDefault();
-				touchMoveX = event.changedTouches[0].pageX;
-				touchMoveY = event.changedTouches[0].pageY;
-			}, false);
-	
-			if (touchStartX > touchMoveX) {
-				if (touchStartX > (touchMoveX + 50)) {
-					window.addEventListener("touchend", slideNext, false);
-				}
-			} else if (touchStartX < touchMoveX) {
-				if ((touchStartX + 50) < touchMoveX) {
-					window.addEventListener("touchend", slidePrev, false);
-				}
-			}
+	//SP
+	window.addEventListener("load", function (event) {
+		var touchStartX;
+		var touchStartY;
+		var touchMoveX;
+		var touchMoveY;
+
+		window.addEventListener("touchstart", function (event) {
+			event.preventDefault();
+			touchStartX = event.touches[0].pageX;
+			touchStartY = event.touches[0].pageY;
 		}, false);
-	*/
+
+		window.addEventListener("touchmove", function (event) {
+			event.preventDefault();
+			touchMoveX = event.changedTouches[0].pageX;
+			touchMoveY = event.changedTouches[0].pageY;
+		}, false);
+
+		if (touchStartX > touchMoveX) {
+			if (touchStartX > (touchMoveX + 50)) {
+				window.addEventListener("touchend", slideNext, false);
+			}
+		} else if (touchStartX < touchMoveX) {
+			if ((touchStartX + 50) < touchMoveX) {
+				window.addEventListener("touchend", slidePrev, false);
+			}
+		}
+	}, false);
 
 }
 
