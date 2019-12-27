@@ -227,7 +227,7 @@ body{
           left: 50%;
           z-index: 120;
           transform: translate(-50%, -50%);
-          font-size: 10vw;
+          font-size: 3vw;
           letter-spacing: 0.05em;
           pointer-events: none;
           animation: new 1s ease-out;
@@ -535,7 +535,17 @@ header{
     img{
       width: 100%;
       max-width: 800px;
-      margin: 40px auto;
+      margin: 24px auto;
+    }
+    .md-flex{
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+      figure{
+        width: 320px;
+      }
     }
   }
   @media screen and (max-width: $breakpoint) {
@@ -588,7 +598,7 @@ header{
     }
     img{
       width: 100%;
-      margin: 40px auto;
+      margin: 8px auto;
     }
   }
   }
