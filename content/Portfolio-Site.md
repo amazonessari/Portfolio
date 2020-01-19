@@ -1,6 +1,6 @@
 ---
 title: "Portfolio Site"
-date: 2019-10-27T22:59:02+09:00
+date: 2020-01-07T22:59:02+09:00
 draft: false
 language: "English"
 charge: "Design & Coding"
@@ -10,8 +10,9 @@ name: "name3.svg"
 ---
 
 # Overview
-It is my first portfolio website that I designed and coded entirely to show my work. Built by open-source static site generators HUGO.
-
+I created this website entirely by myself to broaden job opportunities.
+It is supposed to be attached along with my resume.
+Built by the static site generator HUGO that allows me to post reports in markdown to perform regular updates.
 
 # My role
 
@@ -26,4 +27,9 @@ Coded in HTML, SCSS, and pure JavaScript with HUGO
 
 
 # Process
-I made this portfolio website to expand job opportunities with attaching to my resume. Thus I prioritized my works themself the most that cannot be conveyed in documents. Also, since I am neither experienced nor educated yet, it is my strategy to let you focus on what I have created.
+It is designed for my works to be conspicuous because they tell the improvement of my skill. It is important for me who has no much background or degree, and also, to prioritize what a website can convey but not a document.
+
+Today motion and interactivity are essential to improve usability, so I experimented a lot to incorporate them with learning. It is a slide show to emphasize each project.
+
+I was struggling with the animation to make this slide show flow from right to left but solved it by laying the elements. Also, SVG images may have bugs during transition unless z-index is written.
+I learned a lot through the experiments. I am going to continue to take new learnings.

@@ -7,13 +7,12 @@ if (works) {
 	var length = works.getAttribute("id") - 1;
 	var nowIndex = 0;
 	work[nowIndex].classList.add("show");
-	TweenMax.fromTo(".bar", 5, { width: "0%", ease: "Linear" }, { width: "100%", ease: "Linear" });
+	TweenMax.fromTo(".bar", 8, { width: "0%", ease: "Linear" }, { width: "100%", ease: "Linear" });
 	var getColor = work[nowIndex].getAttribute("id");
 	document.body.style.backgroundColor = getColor;
-	work[0].insertAdjacentHTML('afterbegin', '<h4 class="new">NEW</h4>');
 
 	function sliderSlide(val) {
-		TweenMax.fromTo(".bar", 5, { width: "0%", ease: "Linear" }, { width: "100%", ease: "Linear" });
+		TweenMax.fromTo(".bar", 8, { width: "0%", ease: "Linear" }, { width: "100%", ease: "Linear" });
 		prevButton.disabled = true;
 		nextButton.disabled = true;
 		work[nowIndex].classList.remove("show");
@@ -48,7 +47,7 @@ if (works) {
 	nextButton.addEventListener("click", slideNext, false);
 
 	//auto
-	setInterval(slideNext, 5000);
+	setInterval(slideNext, 8000);
 
 	//reset sliding class
 	works.addEventListener('animationend', () => {
@@ -115,4 +114,22 @@ if (nameDivs) {
 		xhr.open("GET", nameDiv.getAttribute("data-src"));
 		xhr.send();
 	});
+}
+
+
+//AutoSlide
+
+var slideIndex = 0;
+carousel();
+
+function carousel() {
+	var i;
+	var x = document.querySelector(".md-autoslide").children;
+	for (i = 0; i < x.length; i++) {
+		x[i].style.display = "none";
+	}
+	slideIndex++;
+	if (slideIndex > x.length) { slideIndex = 1 }
+	x[slideIndex - 1].style.display = "block";
+	setTimeout(carousel, 2000); // Change image every 2 seconds
 }

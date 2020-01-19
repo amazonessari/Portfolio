@@ -10,8 +10,9 @@ name: "name4.svg"
 ---
 
 # Overview
-This is a landing page for the internship recruitment of our external client.
+This is an intern recruitment LP for our clients to communicate enthusiasm to specific targets.
 
+<a class="visit" href="https://www.progrit.co.jp/intern/" target="_brank">Visit Website</a>
 
 # My role
 ## Research
@@ -28,12 +29,12 @@ Deployed the repository on the server of our client
 
 # Team
 
-## Fumiya Sorimachi - Mentor Designer
-Gave me a feedback
+## Fumiya Sorimachi
+Mentor Designer - Gave me a feedback
 
 
 # Process
+I set CTA considering the flow of contents to effectively guide users towards the goal conversion. Besides, all clickable elements are interactive.
+I am using the library AOS for the animation when the elements entered the view.
 
---- Preparing ---
-
-<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/379405898?loop=1&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+<div class="vimeo" style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/379405898?loop=1&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>

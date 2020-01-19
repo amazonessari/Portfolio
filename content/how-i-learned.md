@@ -10,43 +10,39 @@ image: "work-1.png"
 name: "name-1.svg"
 ---
 
-# Background
-I started coding at 12 years old to customize my diary blog and I was pretty much enjoying it. However, since I was too eager in it, my mom took the laptop away from me when I was 14. Since then, I had no chance to touch a computer till 20 of age when I bought myself one.<br>
-Meanwhile I was dreaming to live abroad because I only grew up in a small town with seeing different culture from TV.
-Finally I made it after saving up at 19. NewZealand first, and then Australia
-During meeting people from various backgrounds, I became very interested in Web field
+# My background
+I started customizing HTML/CSS at 12 years old for my diary blog. However, since I was too eager in it, my mom took the laptop away from me soon. Since then, I had not touched a computer.<br>
+Meanwhile, I was dreaming to live abroad because I only grew up in a small town in Japan with seeing other cultures through media but no chance to travel. Finally, I made it to NewZealand and Australia for a long stay at 19 after saving up. <br>
+While meeting travelers from many different backgrounds during the journey, creativity and flexibility of IT field fascinated me a lot.
+I was pretty sure that I would love design and coding looking back on my childhood, so I decided to make a new career.
 
-
-<div class="md-flex">
-{{< figure src="/how-i-learned/flex1.JPG">}}
-{{< figure src="/how-i-learned/flex2.JPG">}}
-{{< figure src="/how-i-learned/flex3.JPG">}}
-{{< figure src="/how-i-learned/flex4.JPG">}}
-{{< figure src="/how-i-learned/flex5.JPG">}}
-{{< figure src="/how-i-learned/flex6.JPG">}}
-{{< figure src="/how-i-learned/flex7.JPG">}}
-{{< figure src="/how-i-learned/flex8.JPG">}}
-{{< figure src="/how-i-learned/flex9.JPG">}}
+<div class="md-autoslide">
+{{< figure src="/how-i-learned/flex1.jpg">}}
+{{< figure src="/how-i-learned/flex2.jpg">}}
+{{< figure src="/how-i-learned/flex3.jpg">}}
+{{< figure src="/how-i-learned/flex4.jpg">}}
+{{< figure src="/how-i-learned/flex7.jpg">}}
+{{< figure src="/how-i-learned/flex6.jpg">}}
+{{< figure src="/how-i-learned/flex5.jpg">}}
+{{< figure src="/how-i-learned/flex8.jpg">}}
+{{< figure src="/how-i-learned/flex9.jpg">}}
 </div>
 
-# Started from coding
-
-I started learning coding on web services [Progate](https://progate.com/) and [freeCodeCamp](https://www.freecodecamp.org/) before design.
+# In the beginning
+First, I bought myself a laptop to learn to code in services called Progate and freeCodeCamp. Also, I attended meetup events weekly to fix bugs and develop together in Australia. Creativity excited me a lot, especially in designing.
 {{< figure src="/how-i-learned/1.png">}}
 {{< figure src="/how-i-learned/2.png">}}
 
-
-# Before internship
-I have been into creativity in my entire life. When I was a little kid I used try to make anything from trash such as UFO catcher, a scale model and furniture.<br>
-It comes to aesthetics when to create anything. Beautiful stuffs attract me a lot, but I thought it is a natural born talent and there is nothing I can do.
-However I had a chance to learn design through employee referral the internship at Scoville.
-These are the designs I have shown in the interview for internship at [scoville](https://sc0ville.com/) on 7th May, 2019
+Fortunately, I grabbed a chance to work as a designer intern at Scoville through employee referral.
+These designs below are what I shared in the interview on the 7th of May, 2019.
 {{< figure src="/how-i-learned/3.png">}}
 {{< figure src="/how-i-learned/4.png">}}
 
 
 # In the internship
-I worked on assignments from senior designer for several months.
-I kept studying and designing with constantly giving presentation. I learned a lot from their feedback.
+For the first several months, I had worked on assignments of banner, logo, and LP design from a senior to know how to design logically. I  kept giving them my presentation step by step.
+It contained my research, the progress, and the logic of my output. 
+I researched anything to design stuff that makes sense.
+That was a great practice, and I  learned thousands from their feedback. 
 {{< figure src="/how-i-learned/5.png">}}
 {{< figure src="/how-i-learned/6.png">}}
