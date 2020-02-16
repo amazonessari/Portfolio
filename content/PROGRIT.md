@@ -10,9 +10,12 @@ name: "name4.svg"
 ---
 
 # Overview
+
+外部クライアントのインターン募集LPを作成しました。これは特定のターゲットに向けてその情熱を伝えるために作りました。
+
 This is an intern recruitment LP for our clients to communicate enthusiasm to specific targets.
 
-<a class="visit" href="https://www.progrit.co.jp/intern/" target="_brank">Visit Website</a>
+<a class="visit" href="https://www.progrit.co.jp/intern4/" target="_brank">Visit Website</a>
 
 # My role
 ## Research
@@ -34,6 +37,11 @@ Mentor Designer - Gave me a feedback
 
 
 # Process
+
+ユーザーにより効果的にゴールとなるボタンをクリックしてもらうために、コンテンツの流れを意識しながらボタンを設置しました。
+また、クリックできる全ての要素がインタラクティブにデザインされています。
+今回はライブラリのAOSを使って要素がスクリーン内に出入りするアニメーションを加えました。
+
 I set CTA considering the flow of contents to effectively guide users towards the goal conversion. Besides, all clickable elements are interactive.
 I am using the library AOS for the animation when the elements entered the view.
 

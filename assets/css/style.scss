@@ -520,6 +520,16 @@ header{
       padding: 16px 32px;
       margin: 16px auto;
     }
+    pre{
+      width: 100%;
+      max-width: 800px;
+      margin: 24px auto;
+      text-align: left;
+      padding: 24px 40px;
+      code{
+        
+      }
+    }
   }
   @media screen and (max-width: $breakpoint) {
     padding: 200px 0 16px;
@@ -656,7 +666,7 @@ Modal
   position: fixed;
   top: -100%;
   left: 0;
-  z-index: 150;
+  z-index: -1;
   width: 100%;
   height : 100vh;
   overflow: hidden;
@@ -665,6 +675,7 @@ Modal
   &.show{
     opacity: 1;
     top: 0;
+    z-index: 150;
   }
   .column_left, .column_right{
     cursor: default;
